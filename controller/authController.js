@@ -16,7 +16,7 @@ try {
 } catch (error) {
     console.log(error)
     return res.status(400).json({
-        message:"EC"
+        message:error.message
     })
 }
   
@@ -65,7 +65,7 @@ const signIn=async(req,res,next)=>{
     } catch (error) {
         return res.status(400).json({
             success:false,
-            message:error.message
+            message:"EC"
         })
     }
 
