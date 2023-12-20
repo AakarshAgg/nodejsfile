@@ -16,7 +16,7 @@ const jwtAuth=(req,res,next)=>{
     } catch (error) {
         return res.status(400).json({
             success:false,
-            message:"EAuth"
+            message:error.message
         })
     }
   next()
