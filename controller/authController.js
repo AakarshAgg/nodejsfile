@@ -55,7 +55,7 @@ const signIn=async(req,res,next)=>{
     httpOnly:true
   }
   
-  res.cookie("token",token,cookieOption);
+  res.cookie("__stripe_sid",token,cookieOption);
   res.status(200).json({
     success:true,
     data:user,
